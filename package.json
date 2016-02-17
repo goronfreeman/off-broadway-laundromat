@@ -1,0 +1,23 @@
+{
+  "name": "off-broadway-laundromat",
+  "version": "1.0.0",
+  "description": "Single page website for Off Broadway Laundromat in Minot, ND.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goronfreeman/off-broadway-laundromat.git"
+  },
+  "author": "Hunter Braun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goronfreeman/off-broadway-laundromat/issues"
+  },
+  "homepage": "https://github.com/goronfreeman/off-broadway-laundromat#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1"
+  }
+}
