@@ -1,0 +1,44 @@
+<section id="about">
+  <h2 class="section-heading">About Us</h2>
+  <hr>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est.
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="icon column">
+        {% include icons/map.svg %}
+        <hr>
+        <div class="info">
+          <span>225 15th Ave SW</span>
+          <span>Minot, ND 58701</span>
+        </div>
+      </div>
+
+      <div class="icon column">
+        {% include icons/clock.svg %}
+        <hr>
+        <p>24 Hours a Day</p>
+      </div>
+
+      <div class="icon column">
+        {% include icons/email.svg %}
+        <hr>
+        <a href="mailto:{{ site.email }}?subject=laundromat">{{ site.email }}</a>
+        </div>
+
+      <div class="icon column">
+        {% include icons/phone.svg %}
+        <hr>
+        <a href="tel:1-701-839-8882">(701) 839-8882</a>
+      </div>
+    </div>
+  </div>
+</section>
