@@ -6,16 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Off Broadway Laundromat
+email: dsprayer@minot.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Off Broadway Laundromat offers state-of-the-art equipment to take care of all
+  your laundry needs. Sit back and relax while you wait with a cappuccino while
+  you catch up on your emails while using our complimentary Wi-Fi. We are here
+  to make laundry day something to look forward to.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://www.offbroadwaylaundromat.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
