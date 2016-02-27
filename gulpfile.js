@@ -2,13 +2,8 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     cp           = require('child_process'),
     concat       = require('gulp-concat'),
-    rename       = require('gulp-rename'),
-    uglify       = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
-    concatCss    = require('gulp-concat-css'),
-    cssnano      = require('gulp-cssnano'),
-    sass         = require('gulp-sass'),
-    imagemin     = require('gulp-imagemin');
+    sass         = require('gulp-sass');
 
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -20,34 +15,20 @@ gulp.task('sass', function() {
   .pipe(gulp.dest('assets/css'));
 });
 
-// Autoprefix, Concat, & Minify CSS
+// Autoprefix CSS
 gulp.task('css', function() {
   return gulp.src('assets/css/main.css')
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
     cascade: false
   }))
-  .pipe(cssnano())
-  .pipe(gulp.dest('assets/css'))
-  .pipe(rename('main.min.css'))
-  .pipe(gulp.dest('assets/css'))
 });
 
-// Concatenate & Minify JS
+// Concatenate JS
 gulp.task('scripts', function() {
   return gulp.src('assets/js/*.js')
   .pipe(concat('main.js'))
   .pipe(gulp.dest('assets/js'))
-  .pipe(rename('main.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('assets/js'));
-});
-
-// Minify Images
-gulp.task('images', function() {
-  return gulp.src('assets/img/*')
-  .pipe(imagemin())
-  .pipe(gulp.dest('assets/img'));
 });
 
 // Build the Jekyll Site
@@ -73,10 +54,10 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 
 // Watch Files for Changes
 gulp.task('watch', function() {
-  gulp.watch('assets/css/*.scss', ['sass', 'css']);
-  gulp.watch('assets/js/*.js', ['scripts']);
-  gulp.watch(['index.html', '_config.yml', '_layouts/*', '_includes/*', '_posts/*', '_assets/*'], ['jekyll-rebuild']);
+  gulp.watch('assets/css/*.scss', ['sass', 'css', 'jekyll-rebuild']);
+  gulp.watch('assets/js/*.js', ['scripts', 'jekyll-rebuild']);
+  gulp.watch(['index.html', '_config.yml', '_layouts/*', '_includes/*', '_posts/*', 'assets/*'], ['jekyll-rebuild']);
 });
 
 // Default Task
-gulp.task('default', ['sass', 'css', 'scripts', 'images', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'browser-sync', 'watch']);
