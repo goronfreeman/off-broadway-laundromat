@@ -1,0 +1,30 @@
+.navbar {
+  background-color: rgba(255, 255, 255, .8);
+  height: 46px;
+  position: fixed;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 2;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    float: right;
+
+    a {
+      color: #000;
+      display: block;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+  }
+}
+
+.navbar-brand {
+  color: #000;
+  display: block;
+  float: left;
+  padding: 10px 16px;
+  text-decoration: none; }
