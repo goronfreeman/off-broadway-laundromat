@@ -1,0 +1,28 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css';
+@import 'navbar';
+@import 'header';
+@import 'about';
+@import 'equipment';
+@import 'news';
+
+hr {
+  margin-top: 10px;
+  width: 10rem;
+}
+
+section {
+  padding: 4rem;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  p {
+    max-width: 100rem;
+    margin: 0 auto 3.5rem;
+  }
+}
