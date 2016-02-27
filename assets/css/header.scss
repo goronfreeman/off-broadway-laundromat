@@ -1,0 +1,24 @@
+header {
+  background-image: url('../img/laundromat.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.header-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.subheader {
+  font-size: 20px;
+}
