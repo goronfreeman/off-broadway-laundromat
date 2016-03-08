@@ -1,28 +1,36 @@
+$primary-color: #3aa3c1;
+
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css';
+@import '../../node_modules/milligram/dist/milligram';
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
 @import 'navbar';
 @import 'header';
 @import 'about';
 @import 'equipment';
 @import 'news';
 
+html {
+  margin-top: 46px; // TODO
+}
+
 hr {
   margin-top: 10px;
   width: 10rem;
 }
 
+.header-content,
 section {
   padding: 4rem;
 
-  h2 {
+  .section-heading {
     margin: 0;
     padding: 0;
     text-align: center;
   }
 
   p {
-    max-width: 100rem;
     margin: 0 auto 3.5rem;
+    max-width: 94.5rem;
   }
 }
