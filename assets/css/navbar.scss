@@ -1,23 +1,32 @@
+$animation-duration: 200ms;
+
 .navbar {
-  background-color: rgba(255, 255, 255, .8);
+  background: #fff;
+  border-bottom: 1px solid #ddd;
   height: 46px;
   position: fixed;
-  text-transform: uppercase;
+  transform: translateY(-46px); // TODO
   width: 100%;
   z-index: 2;
 
   ul {
+    float: right;
     list-style-type: none;
   }
 
   li {
-    float: right;
+    float: left;
 
     a {
       color: #000;
       display: block;
       padding: 10px 16px;
       text-decoration: none;
+      width: 100%;
+
+      &:hover {
+        background: #ddd;
+      }
     }
   }
 }
@@ -26,5 +35,70 @@
   color: #000;
   display: block;
   float: left;
+  letter-spacing: 1px;
   padding: 10px 16px;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  display: none;
+  float: right;
+  transition: all 1s;
+}
+
+.menu--open {
+  .line:first-child {
+    transform: rotate(45deg);
+    transform-origin: left;
+    margin-bottom: 7px;
+  }
+
+  .line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+    margin-bottom: 7px;
+  }
+
+  .line:last-child {
+    transform: rotate(-45deg);
+    transform-origin: left;
+  }
+}
+
+@media (max-width: 570px) {
+  .hamburger {
+    display: block;
+    height: 46px;
+  }
+
+  .line {
+    border-bottom: 3px solid #000;
+    margin-bottom: 4px;
+    transition: all $animation-duration ease-in-out;
+    width: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .menu {
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: height $animation-duration ease-in-out;
+    width: 100%;
+  }
+
+  .navbar li {
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .slide-down {
+    height: 138px;
+  }
+}
