@@ -1,8 +1,15 @@
 <nav class="navbar">
-  <a class="navbar-brand" href="#">{{ site.title }}</a>  
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#equipment">Equipment</a></li>
-    <li><a href="#news">News</a></li>
+  <a data-scroll href="#" class="navbar-brand">{{ site.title }}</a>
+
+  <div class="hamburger toggle" id="menu-toggle">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <ul class="menu" id="menu">
+    <li><a class="toggle" data-scroll href="#about">About</a></li>
+    <li><a class="toggle" data-scroll href="#equipment">Equipment</a></li>
+    <li><a class="toggle" data-scroll href="#news">News</a></li>
   </ul>
 </nav>
